@@ -1,0 +1,141 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": [
+    "stylelint-use-logical",
+    "stylelint-declaration-strict-value",
+    "stylelint-declaration-block-no-ignored-properties"
+  ],
+  "defaultSeverity": "error",
+  "rules": {
+    "selector-class-pattern": null,
+    "keyframes-name-pattern": null,
+    "no-descending-specificity": null,
+    "scale-unlimited/declaration-strict-value": [
+      ["color", "background-color", "background", "fill", "font-size", "/^padding/", "/^margin/"],
+      {
+        "ignoreValues": [
+          "currentColor",
+          "transparent",
+          "inherit",
+          "initial",
+          "revert",
+          "revert-layer",
+          "unset",
+          "auto",
+          "0"
+        ]
+      }
+    ],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "value-keyword-case": "lower",
+    "unit-disallowed-list": [
+      ["px", "em"],
+      {
+        "ignoreProperties": {
+          "px": [
+            "/^border/",
+            "/^outline/",
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "box-shadow",
+            "letter-spacing",
+            "/width$/",
+            "/height$/",
+            "/^inset/",
+            "/gap$/"
+          ]
+        },
+        "ignoreMediaFeatureNames": { "px": ["/width$/", "/height$/"] },
+        "ignoreFunctions": ["blur"]
+      }
+    ],
+    "declaration-property-value-disallowed-list": [
+      {
+        "/width$/": "/^\\d{2,}px$/",
+        "/height$/": "/^\\d{2,}px$/",
+        "/gap$/": "/^\\d{2,}px$/"
+      },
+      { "message": "Usage of px is restricted - use predefined variables or rem instead" }
+    ],
+    "csstools/use-logical": [
+      "always",
+      { "except": ["width", "height", "min-width", "min-height", "max-width", "max-height"] }
+    ],
+    "declaration-block-no-duplicate-properties": true,
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }],
+    "declaration-property-value-no-unknown": [true],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "tap-highlight-color",
+          "touch-callout",
+          "text-fill-color",
+          "text-stroke",
+          "text-stroke-color",
+          "text-stroke-width",
+          "line-clamp",
+          "box-orient",
+          "font-smoothing",
+          "osx-font-smoothing",
+          "mask-composite",
+          "user-select",
+          "backdrop-filter",
+          "hyphens",
+          "text-size-adjust",
+          "appearance",
+          "mask",
+          "mask-image",
+          "mask-size",
+          "mask-position",
+          "mask-repeat",
+          "mask-clip",
+          "mask-origin",
+          "mask-mode",
+          "print-color-adjust"
+        ]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": [
+          "-webkit-sticky",
+          "-webkit-box",
+          "-webkit-inline-box",
+          "-webkit-fill-available",
+          "-moz-available"
+        ]
+      }
+    ],
+    "selector-no-vendor-prefix": [
+      true,
+      {
+        "ignoreSelectors": [
+          "::-webkit-scrollbar",
+          "::-webkit-scrollbar-track",
+          "::-webkit-scrollbar-thumb",
+          "::-webkit-scrollbar-corner",
+          "::-webkit-input-placeholder",
+          "::-webkit-search-decoration",
+          "::-webkit-search-cancel-button",
+          "::-webkit-progress-bar",
+          "::-webkit-progress-value",
+          "::-webkit-slider-thumb",
+          "::-webkit-slider-runnable-track",
+          "::-webkit-meter-bar",
+          "::-webkit-meter-optimum-value",
+          "::-webkit-file-upload-button",
+          "::-webkit-details-marker",
+          "::-moz-range-thumb",
+          "::-moz-range-track",
+          "::-moz-range-progress",
+          "::-moz-focus-inner",
+          "::-ms-fill-lower"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: fe_scanner
+      POSTGRES_PASSWORD: fe_scanner
+      POSTGRES_DB: fe_scanner
+    ports:
+      - "5432:5432"
+    volumes:
+      - fe_scanner_pgdata:/var/lib/postgresql/data
+
+volumes:
+  fe_scanner_pgdata:

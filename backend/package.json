@@ -1,0 +1,41 @@
+{
+  "name": "fe-scanner-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend for the FE codebase security scanner (secrets, dependency vulnerabilities, SonarQube).",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate": "node src/migrate.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.237",
+    "@anthropic-ai/vertex-sdk": "^0.19.5",
+    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/parser": "^8.67.0",
+    "adm-zip": "^0.6.0",
+    "connect-pg-simple": "^10.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-no-unsanitized": "^4.1.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-security": "^4.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "globals": "^17.11.0",
+    "multer": "^2.2.0",
+    "pg": "^8.23.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
+    "stylelint-declaration-strict-value": "^1.11.1",
+    "stylelint-use-logical": "^2.1.3",
+    "typescript": "^6.0.3"
+  }
+}

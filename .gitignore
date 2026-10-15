@@ -1,0 +1,48 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+dist-ssr/
+build/
+
+# secrets - never commit
+.env
+.env.*
+!.env.example
+
+# scan storage (uploaded/extracted user codebases)
+backend/storage/
+
+# logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# coverage / test output
+coverage/
+.nyc_output/
+
+# caches
+.cache/
+.vite/
+.eslintcache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.local
